@@ -1,0 +1,18 @@
+<div [ngClass]="alerta" class="alert">
+    A simple success alert—check it out!
+</div>
+
+<br>
+<br>
+
+<h3 [ngClass]="{'text-danger': true}">Hola Mundo</h3>
+
+<br><br>
+
+<h3>Proceso Asíncrono</h3>
+
+<button type="button" class="btn btn-primary" (click)="ejecutar()" [disabled]="loading">
+    <i [ngClass]="{'fa-save': !loading, 'fa-sync fa-spin': loading}" class="fa"></i> 
+    <span *ngIf="!loading"> Guardar cambios</span>
+    <span *ngIf="loading"> Espere por favor...</span>
+</button>
